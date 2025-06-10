@@ -1,0 +1,27 @@
+name: Build EmailBeta
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Copy EmailBeta folder
+        run: |
+          mkdir drop
+          xcopy EmailBeta drop\EmailBeta /E /I /Y
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: emailbeta-drop
+          path: drop
+
