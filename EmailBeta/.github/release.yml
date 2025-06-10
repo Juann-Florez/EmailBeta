@@ -1,0 +1,32 @@
+name: Release EmailBeta
+
+on:
+  workflow_dispatch:  # Solo se ejecuta manualmente
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: emailbeta-drop
+
+      - name: Replace tokens in HTML (simulado)
+        run: |
+          (Get-Content drop\EmailBeta\index.html) -replace '\{var\}', 'REPLACED_VALUE' | Set-Content drop\EmailBeta\index.html
+
+      - name: Run Azure CLI commands
+        uses: azure/cli@v1
+        with:
+          inlineScript: |
+            az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+            az storage blob upload-batch -s drop/EmailBeta -d '$web' --account-name <your-storage-account>
+
+      - name: Run PowerShell logic (simulado)
+        run: |
+          Write-Output "Simulando llamada a Power Automate y Logic App"
