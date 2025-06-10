@@ -1,0 +1,26 @@
+name: Build EmailBeta
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Build the project
+        run: |
+          echo "Simulando build..."
+          mkdir drop
+          echo "<html><body>EmailBeta Build</body></html>" > drop/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: emailbeta-drop
+          path: drop/
