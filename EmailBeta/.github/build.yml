@@ -3,8 +3,7 @@ name: Build EmailBeta
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,14 +13,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Copy EmailBeta folder
+      - name: Build the project
         run: |
+          echo "Simulando build..."
           mkdir drop
-          xcopy EmailBeta drop\EmailBeta /E /I /Y
+          echo "<html><body>EmailBeta Build</body></html>" > drop/index.html
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: emailbeta-drop
-          path: drop
-
+          path: drop/
