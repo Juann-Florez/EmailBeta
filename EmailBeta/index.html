@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./faviconGHT.ico">
+    <link href="./toastr.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Equipo DevOps</title>
+</head>
+
+<body>
+    <div id="contenedorBoton">
+            <!-- Hora actual en una caja estilizada -->
+         <div id="horaCaja">
+             <span id="horaActual"></span>
+         </div>
+        <img src="GHT.png" alt="Imagen centrada" id="imagenCentrada">
+        <button onclick="cambiarFondo()" id="botonCambiar">
+            <img src="colorchange.svg" id="imagenBoton">
+            <span id="textoBoton">Cambiar Tema</span>
+        </button>
+    </div>
+    
+    <script>
+            // Función para obtener y mostrar la hora actual
+             function mostrarHora() {
+                var fecha = new Date();
+                var horas = fecha.getHours();
+                var minutos = fecha.getMinutes();
+                var segundos = fecha.getSeconds();
+                document.getElementById('horaActual').innerText = horas + ':' + minutos + ':' + segundos;
+            }
+
+        // Actualizar la hora cada segundo
+        setInterval(mostrarHora, 1000);
+
+        var colores = [ '#565855', '#0f5f1c', 'whitesmoke'];
+        var indiceColor = 0;
+    
+        function cambiarFondo() {
+            document.body.style.backgroundColor = colores[indiceColor];
+            indiceColor = (indiceColor + 1) % colores.length;
+        }
+    </script>
+    <div class="login" id="textoFueraContenedor">         
+        <div class="centrado" id="Letrafuera">             
+            <span class="mobile-span">
+            <u class="title-messages-automatic"><b>Notificación automática</b></u>🤯</span>
+            </a>        
+            <h2>Work Item Requirement - __WorkItem__</h2>
+            <h3>Subscription Azure - <span class="name-suscription">__Subscription__</span></h3>
+            <p class="text-head">Hemos liberado la versión del RTM __VRTM__</p>
+        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th class="styled-th">Proyectos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>__Project1__</td>
+                </tr>
+                <tr>
+                    <td>__Project2__</td>
+                </tr>
+                <tr>
+                    <td>__Project3__</td>
+                </tr>
+                <tr>
+                    <td>__Project4__</td>
+                </tr>
+                <tr>
+                    <td>__Project5__</td>
+                </tr>
+                <tr>
+                    <td>__Project6__</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th class="styled-th" colspan="2">Bd´s en Elastic Pool - Restauradas __dataRestore__</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Servidor SQL WF</td>
+                    <td>__RTM__.database.windows.net </td>
+                </tr>
+                <tr class="active-row">
+                    <td>Usuario / Contraseña</td>
+                    <td>Credenciales directorio activo - Guest / GS </td>
+                </tr>
+                <tr>
+                    <td>Servidor SQL TV y PDD</td>
+                    <td>__NameTVServer__</td>
+                </tr>
+                <tr>
+                    <td>Base de Datos TV</td>
+                    <td>__SqlDbTV__</td>
+                </tr>
+                <tr>
+                    <td>Base de Datos PDD</td>
+                    <td>__SqlDbPDD__</td>
+                </tr>
+                <tr>
+                    <td>Usuario para TV y PDD</td>
+                    <td>__SqlUserTV__</td>
+                </tr>
+                <tr>
+                    <td>Contraseña para TV y PDD</td>
+                    <td>__SqlPasswordTV__</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-container">
+            <a href="__urlLeSites__" target="_blank" class="button-console LE">
+                <button class="secundary-button console-button">Sitio Le</button>
+            </a>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th class="styled-th" colspan="2">Credenciales acceso sitio LE</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Usuario LE</td>
+                        <td>__UserLeSites__</td>
+                    </tr>
+                    <tr>
+                        <td>Password LE</td>
+                        <td>__PassLeSites__</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="custum-style-table">
+                <thead>
+                    <tr>
+                        <th>Url sitios App services</th>
+                        <th>Elastic Pool</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="__SiteA__" target="_blank">__SiteA__</a></td>
+                        <td>__SiteA2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteB__" target="_blank">__SiteB__</a></td>
+                        <td>__SiteB2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteC__" target="_blank">__SiteC__</a></td>
+                        <td>__SiteC2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteD__" target="_blank">__SiteD__</a></td>
+                        <td>__SiteD2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteE__" target="_blank">__SiteE__</a></td>
+                        <td>__SiteE2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteF__" target="_blank">__SiteF__</a></td>
+                        <td>__SiteF2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteG__" target="_blank">__SiteG__</a></td>
+                        <td>__SiteG2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteH__" target="_blank">__SiteH__</a></td>
+                        <td>__SiteH2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteI__" target="_blank">__SiteI__</a></td>
+                        <td>__SiteI2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteJ__" target="_blank">__SiteJ__</a></td>
+                        <td>__SiteJ2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteK__" target="_blank">__SiteK__</a></td>
+                        <td>__SiteK2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteL__" target="_blank">__SiteL__</a></td>
+                        <td>__SiteL2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteN__" target="_blank">__SiteN__</a></td>
+                        <td>__SiteN2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteM__" target="_blank">__SiteM__</a></td>
+                        <td>__SiteM2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteO__" target="_blank">__SiteO__</a></td>
+                        <td>__SiteO2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteP__" target="_blank">__SiteP__</a></td>
+                        <td>__SiteP2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteQ__" target="_blank">__SiteQ__</a></td>
+                        <td>__SiteQ2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteR__" target="_blank">__SiteR__</a></td>
+                        <td>__SiteR2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteS__" target="_blank">__SiteS__</a></td>
+                        <td>__SiteS2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteT__" target="_blank">__SiteT__</a></td>
+                        <td>__SiteT2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteU__" target="_blank">__SiteU__</a></td>
+                        <td>__SiteU2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteV__" target="_blank">__SiteV__</a></td>
+                        <td>__SiteV2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteW__" target="_blank">__SiteW__</a></td>
+                        <td>__SiteW2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteX__" target="_blank">__SiteX__</a></td>
+                        <td>__SiteX2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteY__" target="_blank">__SiteY__</a></td>
+                        <td>__SiteY2__</td>
+                    </tr>
+                    <tr>
+                        <td><a href="__SiteZ__" target="_blank">__SiteZ__</a></td>
+                        <td>__SiteZ2__</td>
+                    </tr>
+                </tbody>
+            </table>
+                
+                <a href="__UrlComponentBeta__" target="_blank" class="button-console">
+                <button class="secundary-button console-button">Consolas - APK's</button>
+            </a>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th class="styled-th" colspan="2">Componentes de consulta (Beta)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Api LE</td>
+                        <td><a
+                            href="javascript:void(0)" onclick="mostrarPantallaDeCarga()">
+                                <button type="button" class="btn">EndPoint Api</button>
+                            </a>
+                            
+                            <!-- Pantalla de carga -->
+                            <div id="pantallaDeCarga" style="display: none;">
+                                <div class="loading-container">
+                                    <div class="loading-animation"></div>
+                                    <p class="loading-text">Cargando...</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Servicebus Esb</td>
+                        <td><a href="javascript:void(0)" onclick="mostrarPantallaDeCarga3()">
+                            <button type="button" class="btn ">Conection String</button>
+                        </a>
+                        
+                        <!-- Pantalla de carga -->
+                        <div id="pantallaDeCarga" style="display: none;">
+                            <div class="loading-container">
+                                <div class="loading-animation"></div>
+                                <p class="loading-text">Cargando...</p>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Servicebus GloboStudio</td>
+                        <td><a href="javascript:void(0)" onclick="mostrarPantallaDeCarga4()">
+                            <button type="button" class="btn">Conection String</button>
+                        </a>
+                        
+                        <!-- Pantalla de carga -->
+                        <div id="pantallaDeCarga" style="display: none;">
+                            <div class="loading-container">
+                                <div class="loading-animation"></div>
+                                <p class="loading-text">Cargando...</p>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Front Door Test</td>
+                        <td><a href="javascript:void(0)" onclick="mostrarPantallaDeCarga5()">
+                            <button type="button" class="btn" >EndPoint</button>
+                        </a>
+                        
+                        <!-- Pantalla de carga -->
+                        <div id="pantallaDeCarga" style="display: none;">
+                            <div class="loading-container">
+                                <div class="loading-animation"></div>
+                                <p class="loading-text">Cargando...</p>
+                            </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Cosmos DB</td>
+                        <td><a href="javascript:void(0)" onclick="mostrarPantallaDeCarga6()">
+                            <button type="button" class="btn">Conection String</button>
+                        </a>
+                        
+                        <!-- Pantalla de carga -->
+                        <div id="pantallaDeCarga" style="display: none;">
+                            <div class="loading-container">
+                                <div class="loading-animation"></div>
+                                <p class="loading-text">Cargando...</p>
+                            </div>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="Letrafuera2">
+                <p class="text-head">Suscríbete para recibir el email de la beta</p>
+            </div>
+            <div class="content">
+                <form class="subscription">
+                    <input class="add-email" type="email" id="email" name="email" placeholder="user@dominio.com"
+                        autocomplete="off" title="Ingresa un email autorizado">
+                    <button class="submit-email" type="button" id="BtnSendEmail">
+                        <span class="before-submit">Aceptar</span>
+                    </button>
+                </form>
+            </div>
+            <p class="resend">
+                <span>Equipo DevOps - GHT &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                </span>
+            </p>
+            <!-- Pop-Up de notificacion -->
+            <div id="customModal" class="modal">
+                <div class="modal-content">
+            <p id="modalMessage"></p>
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./toastr.js"></script>
+<script src="./script.js"></script>
